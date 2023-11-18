@@ -1,0 +1,333 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&family=Roboto+Slab:wght@400;700&family=Space+Mono:wght@400;700&display=swap");
+
+:root {
+  --red: #f87070;
+  --blue: #70f3f8;
+  --purple: #d881f8;
+  --blue-white: #d7e0ff;
+  --dark-blue: #1e213f;
+  --white: #fff;
+  --off-white: #eff1fa;
+  --off-black: #161932;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  width: 100dvw;
+  height: 100%;
+  background: radial-gradient(at right top, #0f122a, #2e335a);
+  background-size: cover;
+  font-family: var(--font);
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  padding: 2rem 1.5rem 3rem 1.5rem;
+}
+
+.logo {
+  height: 1.5rem;
+}
+
+.controls {
+  width: 100%;
+  min-width: 20.4375rem;
+  max-width: 23.3125rem;
+  height: 3rem;
+  display: flex;
+  background-color: var(--off-black);
+  border-radius: 1.96875rem;
+}
+
+.control-button {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--blue-white);
+  background-color: transparent;
+  flex: 1;
+  border-radius: 1.65625rem;
+  border: none;
+}
+
+.control-button.active {
+  background-color: var(--colour);
+  color: var(--dark-blue);
+}
+
+.outer-circle {
+  width: 18.75rem;
+  height: 18.75rem;
+  border-radius: 50%;
+  /*
+* Created with https://www.css-gradient.com
+* Gradient link: https://www.css-gradient.com/?c1=2e335a&c2=0f122a&gt=r&gd=dbr
+*/
+  background: #2e335a;
+  background: radial-gradient(at right bottom, #2e335a, #0f122a);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner-circle {
+  width: 16.73781rem;
+  height: 16.73781rem;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background-color: var(--off-black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.countdown {
+  font-size: 4rem;
+  font-weight: 700;
+  letter-spacing: -0.25rem;
+  color: var(--blue-white);
+}
+
+.play-pause {
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.82031rem;
+  color: var(--blue-white);
+  text-transform: uppercase;
+  position: relative;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.settings-button {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.modal {
+  height: 34.3125rem;
+  background-color: var(--white);
+  position: absolute;
+  top: 2.88rem;
+  left: 1.5rem;
+  right: 1.5rem;
+  border-radius: 0.9375rem;
+  display: flex;
+  flex-direction: column;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 1.5rem;
+  backdrop-filter: blur(20px);
+}
+
+.settings-heading-section {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1.75rem;
+  border-bottom: 0.0625rem solid #e3e1e1;
+}
+
+.settings-heading-section > h1 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--off-black);
+}
+
+.settings-heading-section > img {
+  width: 0.875rem;
+  height: 0.875rem;
+  margin-top: 0.33rem;
+}
+
+.times-section {
+  padding-bottom: 1rem;
+  border-bottom: 0.0625rem solid #e3e1e1;
+}
+
+.modal h2 {
+  text-align: center;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.26444rem;
+  text-transform: uppercase;
+  margin-top: 1.5rem;
+  margin-bottom: 1.12rem;
+  color: var(--off-black);
+}
+
+.time {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.time p {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--dark-blue);
+  opacity: 0.4;
+}
+
+.timer-settings {
+  width: 8.75rem;
+  height: 2.5rem;
+  flex-shrink: 0;
+  border-radius: 0.625rem;
+  background-color: var(--off-white);
+  padding-left: 1rem;
+  padding-right: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.timer-settings input {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  color: var(--dark-blue);
+  font-size: 0.875rem;
+  font-weight: 700;
+  width: 4rem;
+}
+
+.input-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.time p {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--dark-blue);
+}
+
+.fonts-section {
+  padding-bottom: 1.5rem;
+  border-bottom: 0.0625rem solid #e3e1e1;
+}
+
+.fonts,
+.colours {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.circle {
+  width: 2.5rem;
+  aspect-ratio: 1;
+  color: var(--dark-blue);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.circle.sans {
+  font-family: "Kumbh Sans", sans-serif;
+  background-color: var(--off-white);
+}
+
+.circle.serif {
+  font-family: "Roboto Slab", serif;
+  background-color: var(--off-white);
+}
+
+.circle.mono {
+  font-family: "Space Mono", monospace;
+  background-color: var(--off-white);
+}
+
+.circle.red {
+  background-color: var(--red);
+}
+
+.circle.blue {
+  background-color: var(--blue);
+}
+
+.circle.purple {
+  background-color: var(--purple);
+}
+
+.modal button {
+  color: var(--white);
+  background-color: var(--colour);
+  font-weight: 700;
+  width: 8.75rem;
+  height: 3.3125rem;
+  border-radius: 1.65625rem;
+  border: none;
+  position: absolute;
+  top: calc(100% - 3.3125rem / 2);
+  left: calc(50% - 8.75rem / 2);
+}
+
+.fonts > .active {
+  background-color: var(--off-black);
+  color: var(--white);
+}
+
+.hidden {
+  display: none;
+}
+
+@media screen and (min-width: 48rem) {
+  .settings-heading-section > h1 {
+    font-size: 1.75rem;
+  }
+
+  .modal {
+    height: 29rem;
+    top: calc(50vh - 29rem / 2);
+    width: 33.75rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
+  .times-section > h2 {
+    text-align: left;
+    font-size: 0.8125rem;
+  }
+
+  .times-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .time {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .fonts-section,
+  .colours-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .fonts-section h2 {
+    font-size: 0.8125rem;
+  }
+
+  .modal > button {
+    font-size: 1rem;
+  }
+}
